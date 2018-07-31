@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<title>Hello!</title>
+		<link rel="stylesheet" href="/assets/css/main.css">
+	</head>
+	<body onload="hello.checkChoicesNotReadeds()">
+		<header class="search-container">
+			<input type="text" placeholder="filtre aqui" value="">
+		</header>
+		<div class="manager">
+			<label>
+				Escolha a opção:
+				<select class="select" onchange="hello.action(event)">
+					<option value="none">Nenhum selecionado</option>
+					<option value="all">Selecionar tudo</option>
+					<option value="last-seven">últimos 7 dias</option>
+					<option value="last-twenty">últimos 20 dias</option>
+					<option value="all-readed">e-mails lidos</option>
+				</select>
+			</label>
+			<span class="choices-not-readeds">loading</span>
+			<span class="number-selecteds">{x} selecionados</span>
+		</div>
+		<div class="container">
+			<ul class="names">
+				<li class="name">
+					<input type="checkbox" class='cael'>
+					<span>Cael <small>recebido em: <time class="date" datetime="2018-06-25">25/06/2018</time></small></span>
+				</li>
+				<li class="name">
+					<input type="checkbox" class='ueda'>
+					<span>Ueda <small>recebido em: <time class="date" datetime="2018-06-20">20/06/2018</time></small></span>
+				</li>
+				<li class="name readed">
+					<input type="checkbox" class='cellestino'>
+					<span>cellestino <small>recebido em: <time class="date" datetime="2018-05-24">24/05/2018</time></small></span>
+				</li>
+				<li class="name readed">
+					<input type="checkbox" class='vasco'>
+					<span>Vasco <small>recebido em: <time class="date" datetime="2018-03-15">15/03/2018</time></small></span>
+				</li>
+			</ul>
+
+			<section class="info">
+				<figure>
+					<img src="/assets/images/hyoga.gif" alt="descricao qualquer">
+					<figcaption>descrição do remetente</figcaption>
+				</figure>
+
+				<p>dados do e-mail</p>
+			</section>
+		</div>
+	</body>
+	<script src="/app/controllers/Hello.js"></script>
+	<script src="/app/views/HelloView.js"></script>
+	<script>
+
+		const mails = [
+			 {
+				name: 'cael',
+				description: 'Descrição do cael',
+				img: 'hyoga.gif',
+				dateDelivery: '2018-06-25',
+				dateDeliveryFormated: '25/06/2018',
+			},
+			{
+				name: 'ueda',
+				description: 'Descrição do Ueda',
+				img: 'seiya.jpg',
+				dateDelivery: '2018-06-20',
+				dateDeliveryFormated: '20/06/2018',
+			},
+			{
+				name: 'cellestino',
+				description: 'Descrição do Celestino',
+				img: 'shun.png',
+				dateDelivery: '2018-05-24',
+				dateDeliveryFormated: '24/05/2018',
+			},
+			{
+				name: 'vasco',
+				description: 'Descrição do Vasco',
+				img: 'vegeta.jpg',
+				dateDelivery: '2018-03-15',
+				dateDeliveryFormated: '15/03/2018',
+			}
+		]
+
+		var hello = new Hello();
+	</script>
+</html>

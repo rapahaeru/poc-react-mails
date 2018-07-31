@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "search-container.css",
+	"sources": [
+		"../../../../assets/scss/component/search-container.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,iBAAiB,AAAC,CACjB,UAAU,CAAE,MAAM,CAKlB,AAND,AAGC,iBAHgB,CAGhB,KAAK,AAAC,CACL,KAAK,CAAE,GAAG,CACV"
+}

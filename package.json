@@ -1,0 +1,23 @@
+{
+  "name": "react-do-zero",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "pubsub-js": "^1.6.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "watch:css": "nodemon -e scss --exec 'npm run build:css'",
+    "build:css": "node-sass  assets/scss/ -r --include-path assets/scss/ --output-style compressed --source-map true -o public/assets/css"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.18.2"
+  }
+}
