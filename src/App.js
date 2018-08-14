@@ -18,7 +18,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3004/mails')
+		fetch('http://localhost:9090/?token=miGueLit0&alecrim=111')
 		.then((response) => response.json())
 		.then((json) => {
 			this.setState({
@@ -28,7 +28,6 @@ class App extends Component {
 		});
 
 		PubSub.subscribe('update-checked-email-counter', (topic, isChecked) => {
-			console.log(isChecked);
 			((isChecked === true) ? this.setState({mailsCheckeds: this.state.mailsCheckeds + 1}) : this.setState({mailsCheckeds: this.state.mailsCheckeds - 1}))
 		})
 	}

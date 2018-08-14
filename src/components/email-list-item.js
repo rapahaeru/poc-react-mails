@@ -4,7 +4,6 @@ import pubSub from 'pubsub-js';
 const EmailListItem = (email) => {
 
     const checkEmail = (e) => {
-        console.log(e.target.checked);
         pubSub.publish('update-checked-email-counter', e.target.checked);
     }
 
